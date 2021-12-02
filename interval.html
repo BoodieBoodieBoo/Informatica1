@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<button onclick="myFunction()">Run</button>
+
+<button onclick="myFunction2()">Stop</button>
+
+<script>
+function myFunction() {
+myVar=  setInterval(function(){ alert("Funge di Brutto"); }, 3000);
+}
+
+function myFunction2() {
+  clearInterval(myVar);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="LancioDadi.css" rel="stylesheet" type="text/css">
+
+    <title>Lancio dei dadi</title>
+
+</head>
+<body>
+    
+    <button id="button1" onclick="LancioDado()">Lancia il dado</button>
+    <p id="output1"></p>
+    
+    <button id="button2" onclick="Lancia10Dadi(10)">Lancia 10 dadi</button>
+    <p id="output2"></p>
+    
+    <script>
+        function LancioDado() {
+            let dado=0;
+            let casuale=0;
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            document.getElementById("output1").innerHTML=dado+ "<br>";
+        }
+        
+        function Lancia10Dadi(n) {
+            let dado=0;
+            let casuale=0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            str=str+" "+ dado+"<br>";   
+            }
+            document.getElementById("output2").innerHTML=str;
+        }
+    </script>
+
+</body>
+</html>

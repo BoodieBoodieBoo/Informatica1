@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+  p{
+  color:black;
+  font-size :20px;
+  }
+  </style>
+
+  </head>
+  <body>
+
+
+<h1></h1>
+
+
+</script>
+  <p id="demo">0</p>
+
+  <button onclick="myStopFunction()">Stop time</button>
+
+  <script>
+  const myInterval = setInterval(pippo, 1000);
+  let contatore=4;
+
+  function pippo() {
+  contatore--;
+  document.getElementById("demo").innerHTML = contatore -" ";
+  }
+
+  function myStopFunction() {
+     clearInterval(myInterval);
+     }
+     </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    </p>
+    <p id ="out"></p>
+    <p id="nclick">0</p>
+    <button type="button" onclick="count()">Conto i Click</button>
+    <script>
+        let i = 0;
+      let start = Date.now();
+      let counter = 0;
+      function count() {
+
+        counter++;
+        document.getElementById("nclick").innerHTML = counter.toString();
+        document.getElementbyId("miodiv").style.backgroundColor="red";
+      }
+
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;
+ <title>Document</title>
+ <style>
+ #fufi{
+ visibility: hidden;
+ }
+ #boh {
+ visibility: hidden;
+ }
+.button-73 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+ </style>
+ </head>
+ <body>
+
+<div class="w3-container w3-teal">
+  <h1>APP</h1>
+</div>
+ 
+
+ 
+ 
+ <p id="out">Tempo</p>
+ <p id="nclick">Clicks</p>
+ <p id="demolition">3</p>
+ <p id="boh">13</p>
+ 
+ <button id="fufi" type="button" class="button-73" onclick="count()">Cliccami</button>
+ <div class="w3-container">
+  <p>Supera il record di click</p>
+</div>
+
+<div class="w3-container w3-teal">
+  <p>Fast Click Game</p>
+</div>
+
+ <script>
+ let i = 0;
+ let start = Date.now();
+ let CosoClick = 0;
+ const myInterval = setInterval(pippo,1000);
+ const Interval = setInterval(tonno,1000);
+ const NonSo = setInterval(Rubik,13000);
+ const Pollo = setInterval(fill,3000);
+ var contatore = 3;
+ var bolo = 13;
+ 
+
+ function count() {
+ document.getElementById("out").innerHTML =
+ " " + (Date.now() - start) + " ms";
+ CosoClick++;
+ document.getElementById("nclick").innerHTML = CosoClick.toString();
+ }
+
+ function pippo() {
+ contatore--;
+ document.getElementById("demolition").innerHTML = contatore+" ";
+ }
+ 
+ function fill() {
+ clearInterval(myInterval)
+ clearInterval(Pollo)
+ document.getElementById("demolition").innerHTML = "Clicca più veloce che puoi!";
+ document.getElementById("fufi").style.visibility = "visible";
+ document.getElementById("boh").style.visibility = "visible";
+ 
+ }
+
+ function tonno() {
+ bolo--;
+ document.getElementById("boh").innerHTML = bolo+" ";
+ }
+
+ function Rubik() {
+ document.getElementById("boh").style.visibility = "hidden";
+ document.getElementById("fufi").style.visibility = "hidden";
+ document.getElementById("demolition").style.visibility = "hidden";
+ document.getElementById("out").style.visibility = "hidden";
+ }
+
+
+ 
+
+
+
+ </script>
+ </body>
+</html

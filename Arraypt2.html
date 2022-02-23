@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misura dei tempi onclick di un button</title>
+</head>
+<body>
+    <h1>Premi il bottone e memorizza il tempo in un array</h1>
+<button id="miobottone" onclick="contailtempo()" >Prendi il tempo</button>
+<p id="output">...</p>
+<p id="outputArray">tempi registrati</p>
+<script>
+    let datainizio=Date.now();
+    let arraytempi=[];
+
+
+function contailtempo() {
+    let tempo=Date.now()-datainizio;
+    document.getElementById("output").innerHTML=tempo+ "ms";
+   
+    inputToArray(tempo);
+   
+   
+}
+function inputToArray(a) {
+arraytempi.push(a);
+console.log();
+document.getElementById('outputArray').innerHTML=stampaArray(arraytempi);    
+}
+function stampaArray(v) {
+let str="";
+    for(let i=0;i<v.length;i++)
+    {
+    str=str+ " " + v[i];
+    }
+return str;
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -7,25 +7,25 @@
     <title>BolBol</title>
 </head>
 <body>
-    <p id="out1"></p>
-    <button id="out2"></button>
-    <p id="out3"></p>
-    <script>
 
-        pippo=[];
-        for(let i=0;i<50;i++){
-            pippo.push(Math.round(Math.random()*100));
+    <button onclick="NumeriCasuali(50)">Cliccami Per Lanciare I Numeri</button>
+    <p id="output3"></p> 
+    <button onclick="ContaZeri()">Conta gli zeri</button>
+
+    <script>
+        function NumeriCasuali(n) {
+            let zeri=0;
+            let casuale=0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            zeri=Math.round(casuale*100);
+            str=str+" "+ zeri;  
+            }
+            document.getElementById("output3").innerHTML=str;
         }
-        document.getElementById("out1").innerHTML=pippo;
-        
-        let conta=0;
-        function contaZero(){
-            for(let i=0)
-        }
-        pippo.array.forEach(function TrovaElemento(indice,elemento){
-        if(elemento=0){
-            document.getElementById("out2").innerHTML="elemento"+ elemento + "indice" + indice;
-        }})
     </script>
+
 </body>
 </html>

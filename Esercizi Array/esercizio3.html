@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BolBol</title>
+</head>
+<body>
+
+    <button onclick="NumeriCasuali(7)">7 Numeri</button>
+    <p id="output3"></p> 
+    <button onclick="ContaZeri()">Conta gli zeri</button>
+
+    <script>
+        function NumeriCasuali(n) {
+            let zeri=0;
+            let casuale=0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            zeri=Math.round(casuale*100);
+            str=str+" "+ zeri;  
+            }
+            document.getElementById("output3").innerHTML=str;
+        }
+    </script>
+
+</body>
+</html>

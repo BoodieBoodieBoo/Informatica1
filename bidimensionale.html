@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div id="out1"></div>
+    <div id="out2"></div>
+    <div id="out3"></div>
+
+    <script>
+        let Array0=[],Array1=[];
+        
+        Array2=[];
+        for(let i=0;i<10;i++){
+            Array2.push(parseInt(Math.random()*10))
+            Array0.push(Array2)
+        }
+        document.getElementById("out1").innerHTML=Array2[2];
+
+        Array3=[];
+        for(let i=0;i<10;i++){
+            Array3.push(parseInt(Math.random()*10))
+            Array0.push(Array3)
+        }
+        document.getElementById("out2").innerHTML=Array3[2]
+
+        Array4=[];
+        for(let i=0;i<10;i++){
+            Array4.push(parseInt(Math.random()*10))
+            Array0.push(Array4)
+        }
+        document.getElementById("out3").innerHTML=Array4[2]
+    </script>
+
+</body>
+</html>
